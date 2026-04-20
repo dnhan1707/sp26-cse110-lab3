@@ -3,142 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab2</title>
+    <meta name="description" content="Sprint 3 Kickoff meeting minutes for Project Phoenix - April 10, 2026">
+    <title>Sprint 3 Kickoff - Meeting Minutes</title>
+    <link rel="icon" href="screenshots/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <div class="lab2-container">
-        <!-- Title -->
-        <div class="title-container">
-            <div class="title">
-                <h1>Sprint 3 Kickoff</h1>
-            </div>
+
+        <!-- Header -->
+        <header>
+            <h1>Sprint 3 Kickoff</h1>
             <div class="subTitle">
-                <h2>Weekly Team Sync - Project Phoenix</h2>
+                <h2>Weekly Team Sync - <i>Project Phoenix</i></h2>
                 <h3>April 10, 2026 - 2:00 PM - 3:15 PM</h3>
             </div>
-        </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#attendance">Attendance</a> |
+            <a href="#agenda">Agenda</a> |
+            <a href="#old-business">Old Business</a> |
+            <a href="#new-business">New Business</a> |
+            <a href="#comments">Comments &amp; Questions</a> |
+            <a href="#media">Media</a> |
+            <a href="#feedback">Feedback Form</a>
+        </nav>
 
         <hr>
 
-        <!-- Attendance -->
-        <div class="attendance-container">
-            <h2>Attendance</h2>
-            <ul class="attendance-list">
-                <li><b>Alice Chen</b> - Team Lead</li>
-                <li><b>Bob Martinez</b> - Backend Developer</li>
-                <li><b>Carol Nguyen</b> - Frontend Developer</li>
-                <li><b>David Kim</b> - QA Engineer</li>
-                <li><b>Eve Johnson</b> - Designer</li>
-                <li><em>Absent: Frank Patel (excused)</em></li>
-            </ul>
-        </div>
+        <main>
 
-        <hr>
-
-        <!-- Agenda -->
-        <div class="agenda-container">
-            <h2>Agenda</h2>
-            <ol class="agenda-list">
-                <li>Review action items from Sprint 2 retro</li>
-                <li>Demo of new search feature</li>
-                <li>Discuss database migration timeline</li>
-                <li>Assign Sprint 3 tasks</li>
-                <li>Open floor for questions</li>
-            </ol>
-        </div>
-
-        <hr>
-
-        <!-- Old Business -->
-        <div class="old-business-container">
-            <h2>Old Business</h2>
-            <section>
-                <h3>Sprint 2 Action Items</h3>
-                <ul>
-                    <li><strong>Login page redesign</strong> - Eve presented the updated mockups. Team approved the new layout. <em>Status: Complete.</em></li>
-                    <li><strong>API rate-limiting bug</strong> - Bob confirmed the fix was deployed on April 8. No further issues reported. <em>Status: Complete.</em></li>
-                    <li><strong>Unit test coverage target (80%)</strong> - David noted coverage is currently at 74%. Remaining tests will carry over into Sprint 3. <em>Status: In Progress.</em></li>
+            <!-- Attendance -->
+            <div id="attendance" class="attendance-container">
+                <h2>Attendance</h2>
+                <ul class="attendance-list">
+                    <li><b>Alice Chen</b> - Team Lead</li>
+                    <li><b>Bob Martinez</b> - Backend Developer</li>
+                    <li><b>Carol Nguyen</b> - Frontend Developer</li>
+                    <li><b>David Kim</b> - QA Engineer</li>
+                    <li><b>Eve Johnson</b> - Designer</li>
+                    <li><em>Absent: Frank Patel (excused)</em></li>
                 </ul>
-            </section>
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
-        <!-- New Business -->
-        <div class="new-business-container">
-            <h2>New Business</h2>
-            <section>
-                <h3>Search Feature Demo</h3>
-                <p>Carol demoed the new full-text search feature on the staging environment. Key takeaways:</p>
-                <ul>
-                    <li>Search results load in under 200ms on average</li>
-                    <li>Filters for date range and category are working</li>
-                    <li>Accessibility audit still pending - assigned to Eve</li>
-                </ul>
-            </section>
-            <section>
-                <h3>Database Migration Timeline</h3>
-                <p>Bob proposed migrating from MySQL to PostgreSQL during the April 20-22 maintenance window. The team discussed risks:</p>
-                <ol>
-                    <li>Backup and rollback plan needs to be documented</li>
-                    <li>Staging migration dry-run scheduled for April 17</li>
-                    <li>Alice will notify stakeholders by end of week</li>
+            <!-- Agenda -->
+            <div id="agenda" class="agenda-container">
+                <h2>Agenda</h2>
+                <ol class="agenda-list">
+                    <li>Review action items from Sprint 2 retro</li>
+                    <li>Demo of new search feature</li>
+                    <li>Discuss database migration timeline</li>
+                    <li>Assign Sprint 3 tasks</li>
+                    <li>Open floor for questions</li>
                 </ol>
-            </section>
-            <section>
-                <h3>Sprint 3 Task Assignments</h3>
+            </div>
+
+            <hr>
+
+            <!-- Old Business -->
+            <div id="old-business" class="old-business-container">
+                <h2>Old Business</h2>
+                <section>
+                    <details>
+                        <summary>Sprint 2 Action Items</summary>
+                        <ul>
+                            <li><strong>Login page redesign</strong> - Eve presented the updated mockups. Team approved the new layout. <em>Status: Complete.</em></li>
+                            <li><strong>API rate-limiting bug</strong> - Bob confirmed the fix was deployed on April 8. No further issues reported. <em>Status: Complete.</em></li>
+                            <li><strong>Unit test coverage target (80%)</strong> - David noted coverage is currently at 74%. Remaining tests will carry over into Sprint 3. <em>Status: In Progress.</em></li>
+                        </ul>
+                    </details>
+                </section>
+            </div>
+
+            <hr>
+
+            <!-- New Business -->
+            <div id="new-business" class="new-business-container">
+                <h2>New Business</h2>
+                <section>
+                    <h3>Search Feature Demo</h3>
+                    <p>Carol demoed the new full-text search feature on the staging environment. Key takeaways:</p>
+                    <ul>
+                        <li>Search results load in under 200ms on average</li>
+                        <li>Filters for date range and category are working</li>
+                        <li>Accessibility audit still pending - assigned to Eve</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Database Migration Timeline</h3>
+                    <p>Bob proposed migrating from <i>MySQL</i> to <i>PostgreSQL</i> during the April 20-22 maintenance window. The team discussed risks:</p>
+                    <ol>
+                        <li>Backup and rollback plan needs to be documented</li>
+                        <li>Staging migration dry-run scheduled for April 17</li>
+                        <li>Alice will notify stakeholders by end of week</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Sprint 3 Task Assignments</h3>
+                    <ul>
+                        <li>Finish remaining unit tests - David <span class="priority">(High priority)</span></li>
+                        <li>Search accessibility audit - Eve <span class="priority">(Medium priority)</span></li>
+                        <li>Write migration rollback script - Bob <span class="priority">(High priority)</span></li>
+                        <li>Update user docs for search - Carol <span class="priority">(Low priority)</span></li>
+                    </ul>
+                </section>
+            </div>
+
+            <hr>
+
+            <!-- Comments / Questions -->
+            <div id="comments" class="comments-container">
+                <h2>Comments &amp; Questions</h2>
                 <ul>
-                    <li>Finish remaining unit tests - David (High priority)</li>
-                    <li>Search accessibility audit - Eve (Medium priority)</li>
-                    <li>Write migration rollback script - Bob (High priority)</li>
-                    <li>Update user docs for search - Carol (Low priority)</li>
+                    <li><b>David:</b> "Can we get a shared testing account for the staging DB?" - Alice will set it up by Monday.</li>
+                    <li><b>Eve:</b> "Should the search results page match the new design system or the old one?" - Team agreed to use the new design system.</li>
+                    <li><b>Carol:</b> Suggested adding keyboard shortcuts for power users. Will create a ticket for Sprint 4.</li>
                 </ul>
-            </section>
-        </div>
+            </div>
 
-        <hr>
+            <hr>
 
-        <!-- Comments / Questions -->
-        <div class="comments-container">
-            <h2>Comments & Questions</h2>
-            <ul>
-                <li><b>David:</b> "Can we get a shared testing account for the staging DB?" - Alice will set it up by Monday.</li>
-                <li><b>Eve:</b> "Should the search results page match the new design system or the old one?" - Team agreed to use the new design system.</li>
-                <li><b>Carol:</b> Suggested adding keyboard shortcuts for power users. Will create a ticket for Sprint 4.</li>
-            </ul>
-        </div>
+            <!-- Media -->
+            <div id="media">
 
-        <hr>
+                <!-- Diagram -->
+                <div class="diagram-container">
+                    <h2>Whiteboard Diagram</h2>
+                    <img src="screenshots/graph.png" alt="Whiteboard sketch of system architecture from the meeting">
+                </div>
 
-        <!-- Diagram -->
-        <div class="diagram-container">
-            <h2>Whiteboard Diagram</h2>
-            <img src="screenshots/graph.png" alt="Whiteboard sketch of system architecture from the meeting">
-        </div>
+                <hr>
 
-        <hr>
+                <!-- Audio Recording -->
+                <div class="audio-container">
+                    <h2>Audio Recording</h2>
+                    <p>Recording of the full meeting:</p>
+                    <audio controls>
+                        <source src="screenshots/meeting-audio.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
 
-        <!-- Audio Recording -->
-        <div class="audio-container">
-            <h2>Audio Recording</h2>
-            <p>Recording of the full meeting:</p>
-            <audio controls>
-                <source src="screenshots/meeting-audio.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
+                <hr>
 
-        <hr>
+                <!-- Video Recording -->
+                <div class="video-container">
+                    <h2>Video Recording</h2>
+                    <p>Video clip from the meeting:</p>
+                    <video controls>
+                        <source src="screenshots/meeting-video.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
 
-        <!-- Video Recording -->
-        <div class="video-container">
-            <h2>Video Recording</h2>
-            <p>Video clip from the meeting:</p>
-            <video controls>
-                <source src="screenshots/meeting-video.mp4" type="video/mp4">
-                Your browser does not support the video element.
-            </video>
-        </div>
+            </div>
+
+            <hr>
+
+            <!-- Meeting Feedback Form -->
+            <div id="feedback" class="feedback-container">
+                <h2>Meeting Feedback Form</h2>
+                <p>Help us improve future meetings by filling out this quick form.<br>All fields are optional.</p>
+                <form action="#" method="post">
+
+                    <fieldset>
+                        <legend>Your Details</legend>
+
+                        <label for="attendee-name">Name:</label>
+                        <input type="text" id="attendee-name" name="attendee-name" placeholder="Your full name">
+                        <br>
+
+                        <label for="date-attended">Date attended:</label>
+                        <input type="date" id="date-attended" name="date-attended">
+                        <br>
+
+                        <label for="team-name">Team:</label>
+                        <input type="text" id="team-name" name="team-name" list="team-suggestions" placeholder="Start typing your team...">
+                        <datalist id="team-suggestions">
+                            <option value="Backend">
+                            <option value="Frontend">
+                            <option value="QA">
+                            <option value="Design">
+                            <option value="DevOps">
+                        </datalist>
+                        <br>
+
+                        <label for="department">Department:</label>
+                        <select id="department" name="department">
+                            <option value="">-- Select department --</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="design">Design</option>
+                            <option value="qa">Quality Assurance</option>
+                            <option value="product">Product Management</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Meeting Rating</legend>
+                        <label><input type="radio" name="rating" value="excellent"> Excellent</label>
+                        <label><input type="radio" name="rating" value="good"> Good</label>
+                        <label><input type="radio" name="rating" value="poor"> Poor</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Topics Covered (check all that were relevant to you)</legend>
+                        <label><input type="checkbox" name="topic" value="sprint2-review"> Sprint 2 Review</label>
+                        <label><input type="checkbox" name="topic" value="search-demo"> Search Feature Demo</label>
+                        <label><input type="checkbox" name="topic" value="db-migration"> Database Migration</label>
+                        <label><input type="checkbox" name="topic" value="sprint3-tasks"> Sprint 3 Task Assignments</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Additional Comments</legend>
+                        <label for="comments-box">Your comments:</label>
+                        <br>
+                        <textarea id="comments-box" name="comments" rows="4" cols="50" placeholder="Any suggestions for the next meeting?"></textarea>
+                    </fieldset>
+
+                    <button type="submit">Submit Feedback</button>
+
+                </form>
+            </div>
+
+        </main>
 
         <hr>
 
@@ -148,6 +239,7 @@
             <p>Next meeting: <time datetime="2026-04-17T14:00">April 17, 2026 at 2:00 PM</time></p>
             <p>Minutes recorded by <b>Alice Chen</b></p>
         </footer>
+
     </div>
 </body>
 </html>
