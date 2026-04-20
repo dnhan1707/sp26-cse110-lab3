@@ -3,50 +3,67 @@
     --primary-blue: rgb(37, 99, 235);
 }
 
-/* body */
+/* Sets the background to a light gray and text to dark gray for easy reading */
 body {
     background-color: #f5f5f5;
     color: rgb(55, 65, 81);
+    font-size: 1rem; /* rem: scales relative to the browser's default font size */
 }
 
-
-/* header */
-/* var is the fallback */
+/* Dark background on the header to separate it from the page content */
+/* var() uses the variable, and falls back to #1e293b if the variable is missing */
 header {
     background-color: var(--primary-dark, #1e293b);
     color: white;
+    padding: 12pt; /* pt: absolute unit, commonly used in print/typography */
 }
 
-/* Nav desgin for the links */
+/* Adds breathing room around the nav so it doesn't feel cramped */
+nav {
+    padding: 0.75em; /* em: scales relative to the current element's font size */
+}
+
+/* Blue color for nav links to make them stand out as clickable */
 nav a {
     color: hsl(221, 83%, 53%);
 }
 
+/* Slightly darker blue when hovering to give visual feedback */
 nav a:hover {
-    color: hsl(221, 83%, 40%);           /* hsl - darker blue on hover */
+    color: hsl(221, 83%, 40%);
 }
 
+/* Makes the divider lines subtle so they don't overpower the content */
 hr {
-    border-color: rgba(0, 0, 0, 19);   /* rgba - subtle divider */
+    border-color: rgba(0, 0, 0, 19);
 }
 
+/* Red color on priority labels to draw attention to task urgency */
 span.priority {
-    color: color(srgb 0.75 0.1 0.1);    /* wider-gamut color() - red */
+    color: color(srgb 0.75 0.1 0.1);
 }
 
+/* Light tinted background on the collapsible summary to hint it's interactive */
 details summary {
-    background-color: color-mix(in srgb, #1e293b 15%, white);  /* color-mix */
+    background-color: color-mix(in srgb, #1e293b 15%, white);
 }
 
-/* ── Footer ── */
+/* Limits the page width to 80% and centers it so it doesn't stretch on wide screens */
+.lab2-container {
+    width: 80%; /* %: scales relative to the parent element's width */
+}
+
+/* Matches the footer color to the header so the page feels consistent top-to-bottom */
 footer {
-    background-color: #1e293b;           /* hex - matches header */
-    color: white;                        /* color name */
+    background-color: #1e293b;
+    color: white;
+    padding: 0.5cm; /* cm: absolute unit, adds fixed physical spacing around footer text */
 }
 
-/* ── Submit button ── */
-/* var is the fallback */
+/* Styles the submit button to stand out as the main action on the form */
+/* var() uses the variable, and falls back to the rgb value if the variable is missing */
 button[type="submit"] {
     background-color: var(--primary-blue, rgb(37, 99, 235));
     color: white;
+    padding: 8px 16px; /* px: absolute unit, gives the button a comfortable click area */
 }
