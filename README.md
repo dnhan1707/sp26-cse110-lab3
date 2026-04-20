@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-Publish link: https://dnhan1707.github.io/Lab2_Starter/
+# Lab 3
+Link: https://dnhan1707.github.io/sp26-cse110-lab3/
