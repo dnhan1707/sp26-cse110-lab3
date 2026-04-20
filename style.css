@@ -1,3 +1,8 @@
+:root {
+    --primary-dark: #1e293b;
+    --primary-blue: rgb(37, 99, 235);
+}
+
 /* body */
 body {
     background-color: #f5f5f5;
@@ -6,8 +11,9 @@ body {
 
 
 /* header */
+/* var is the fallback */
 header {
-    background-color: #1e293b;
+    background-color: var(--primary-dark, #1e293b);
     color: white;
 }
 
@@ -39,7 +45,8 @@ footer {
 }
 
 /* ── Submit button ── */
+/* var is the fallback */
 button[type="submit"] {
-    background-color: rgb(37, 99, 235);  /* rgb - blue */
-    color: white;                        /* color name */
+    background-color: var(--primary-blue, rgb(37, 99, 235));
+    color: white;
 }
