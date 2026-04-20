@@ -10,6 +10,14 @@ body {
     font-size: 1rem; /* rem: scales relative to the browser's default font size */
 }
 
+/* Adds space above and below main content - longhand margin */
+main {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* Dark background on the header to separate it from the page content */
 /* var() uses the variable, and falls back to #1e293b if the variable is missing */
 header {
@@ -48,16 +56,21 @@ details summary {
     background-color: color-mix(in srgb, #1e293b 15%, white);
 }
 
-/* Limits the page width to 80% and centers it so it doesn't stretch on wide screens */
+/* Centers the page horizontally using auto margins - shorthand margin */
 .lab2-container {
-    width: 80%; /* %: scales relative to the parent element's width */
+    width: 80%;
+    margin: 0 auto; /* shorthand: 0 top/bottom, auto left/right centers the container */
 }
+
 
 /* Matches the footer color to the header so the page feels consistent top-to-bottom */
 footer {
     background-color: #1e293b;
     color: white;
-    padding: 0.5cm; /* cm: absolute unit, adds fixed physical spacing around footer text */
+    padding-top: 0.5cm;     /* longhand: each side set individually */
+    padding-bottom: 0.5cm;
+    padding-left: 1cm;
+    padding-right: 1cm
 }
 
 /* Styles the submit button to stand out as the main action on the form */
@@ -66,4 +79,13 @@ button[type="submit"] {
     background-color: var(--primary-blue, rgb(37, 99, 235));
     color: white;
     padding: 8px 16px; /* px: absolute unit, gives the button a comfortable click area */
+}
+
+/* Styled border around each form fieldset to visually group form sections */
+fieldset {
+    border-style: solid;          /* border-style */
+    border-color: #1e293b;        /* border-color */
+    border-width: 1px;            /* border-width */
+    border-radius: 6px;           /* border-radius: rounds the corners */
+    padding: 12px 16px;           /* shorthand padding: top/bottom, left/right */
 }
