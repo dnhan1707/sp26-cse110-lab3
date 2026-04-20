@@ -1,0 +1,45 @@
+/* body */
+body {
+    background-color: #f5f5f5;
+    color: rgb(55, 65, 81);
+}
+
+
+/* header */
+header {
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Nav desgin for the links */
+nav a {
+    color: hsl(221, 83%, 53%);
+}
+
+nav a:hover {
+    color: hsl(221, 83%, 40%);           /* hsl - darker blue on hover */
+}
+
+hr {
+    border-color: rgba(0, 0, 0, 19);   /* rgba - subtle divider */
+}
+
+span.priority {
+    color: color(srgb 0.75 0.1 0.1);    /* wider-gamut color() - red */
+}
+
+details summary {
+    background-color: color-mix(in srgb, #1e293b 15%, white);  /* color-mix */
+}
+
+/* ── Footer ── */
+footer {
+    background-color: #1e293b;           /* hex - matches header */
+    color: white;                        /* color name */
+}
+
+/* ── Submit button ── */
+button[type="submit"] {
+    background-color: rgb(37, 99, 235);  /* rgb - blue */
+    color: white;                        /* color name */
+}
