@@ -199,3 +199,30 @@ time {
 .subTitle h3 {
     display: block; /* block: makes the date sit on its own line below the subtitle */
 }
+
+/* ── Flexbox ── */
+/* nav has more than 2 children (the 7 anchor links), laid out horizontally with flex */
+nav {
+    display: flex;              /* applies flexbox to nav */
+    flex-direction: row;        /* children line up left to right */
+    align-items: center;        /* vertically centers the links */
+    justify-content: center;    /* horizontally centers the group of links */
+    gap: 8px;                   /* spacing between each nav link */
+    flex-wrap: wrap;            /* wraps links onto next line on small screens */
+}
+
+/* ── Grid ── */
+/* attendance list has 6 children, displayed in a 2-column grid */
+.attendance-list {
+    display: grid;                          /* applies grid layout */
+    grid-template-columns: 1fr 1fr;        /* two equal-width columns */
+    gap: 8px;                              /* spacing between grid items */
+    list-style: none;                      /* removes default bullet points */
+    padding: 0;
+}
+
+/* ── :active pseudo-class ── */
+/* gives visual feedback when the button is actively being clicked */
+button:active {
+    background-color: hsl(221, 83%, 30%);
+}
