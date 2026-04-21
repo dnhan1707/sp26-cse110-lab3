@@ -49,7 +49,7 @@ hr {
 
 /* Red color on priority labels to draw attention to task urgency */
 span.priority {
-    color: color(srgb 0.75 0.1 0.1);
+    color: red;
 }
 
 /* Light tinted background on the collapsible summary to hint it's interactive */
