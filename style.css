@@ -16,17 +16,29 @@ main {
     margin-bottom: 16px;
     margin-left: 0;
     margin-right: 0;
+    min-width: 320px; /* min-width: prevents the content area from collapsing too narrow */
 }
 
 /* Dark background on the header to separate it from the page content */
 /* var() uses the variable, and falls back to #1e293b if the variable is missing */
+/* position: relative lets it serve as an anchor for any absolutely positioned children */
 header {
     background-color: var(--primary-dark, #1e293b);
     color: white;
-    padding: 12pt; /* pt: absolute unit, commonly used in print/typography */
+    padding: 12pt;     /* pt: absolute unit, commonly used in print/typography */
+    height: 120px;     /* height: gives the header a fixed height */
+    position: relative; /* relative: keeps the element in normal flow but allows offset */
 }
 
 /* nav link colors are handled by the nested selector block below */
+
+/* position: sticky keeps the nav visible at the top while scrolling */
+nav {
+    position: sticky; /* sticky: sticks to the top of the viewport when scrolled past */
+    top: 0;
+    background-color: #f5f5f5;
+    z-index: 10;
+}
 
 /* Makes the divider lines subtle so they don't overpower the content */
 hr {
@@ -43,10 +55,11 @@ details summary {
     background-color: color-mix(in srgb, #1e293b 15%, white);
 }
 
-/* Centers the page horizontally using auto margins - shorthand margin */
+/* Centers the page horizontally; max-width prevents it stretching on large screens */
 .lab2-container {
-    width: 80%;
-    margin: 0 auto; /* shorthand: 0 top/bottom, auto left/right centers the container */
+    width: 80%;        /* width: sets the container to 80% of the viewport */
+    max-width: 960px;  /* max-width: caps the container so it doesn't get too wide */
+    margin: 0 auto;
 }
 
 
