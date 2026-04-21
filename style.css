@@ -168,3 +168,21 @@ nav {
 footer {
     text-align: center;
 }
+
+/* ── Display ── */
+
+/* block: makes each nav link stack on its own line and fill the row */
+nav a {
+    display: inline-block; /* inline-block: sits inline but can have padding/margin */
+    padding: 4px 8px;
+}
+
+/* inline: keeps the time element flowing with surrounding text */
+time {
+    display: inline;
+}
+
+/* none: hides the subTitle div class name visually (element still in DOM) */
+.subTitle h3 {
+    display: block; /* block: makes the date sit on its own line below the subtitle */
+}
