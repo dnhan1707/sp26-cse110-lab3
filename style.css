@@ -26,20 +26,7 @@ header {
     padding: 12pt; /* pt: absolute unit, commonly used in print/typography */
 }
 
-/* Adds breathing room around the nav so it doesn't feel cramped */
-nav {
-    padding: 0.75em; /* em: scales relative to the current element's font size */
-}
-
-/* Blue color for nav links to make them stand out as clickable */
-nav a {
-    color: hsl(221, 83%, 53%);
-}
-
-/* Slightly darker blue when hovering to give visual feedback */
-nav a:hover {
-    color: hsl(221, 83%, 40%);
-}
+/* nav link colors are handled by the nested selector block below */
 
 /* Makes the divider lines subtle so they don't overpower the content */
 hr {
@@ -88,4 +75,96 @@ fieldset {
     border-width: 1px;            /* border-width */
     border-radius: 6px;           /* border-radius: rounds the corners */
     padding: 12px 16px;           /* shorthand padding: top/bottom, left/right */
+}
+
+/* ── Text Styling ── */
+
+/* Universal selector - applies a base box-sizing reset to every element */
+* {
+    box-sizing: border-box;
+}
+
+/* Element selector - centers and styles all paragraph text */
+p {
+    text-align: left;
+}
+
+/* Selector list - consistent style across all heading levels */
+h1, h2, h3 {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── CSS Selectors ── */
+
+/* ID selector - adds a top border to visually separate the feedback section */
+#feedback {
+    border-top: 2px solid #1e293b;
+    padding-top: 16px;
+}
+
+/* Class selector - already used above for .priority, adding text style */
+.priority {
+    text-decoration: underline;
+}
+
+/* Attribute selector - styles all text inputs */
+input[type="text"] {
+    border: 1px solid #1e293b;
+}
+
+/* Pseudo-class selector - darkens button on hover for feedback */
+button:hover {
+    background-color: hsl(221, 83%, 40%);
+}
+
+/* Descendant combinator - styles paragraphs inside main */
+main p {
+    text-align: left;
+    color: rgb(55, 65, 81);
+}
+
+/* Child combinator - targets the subtitle div directly inside header */
+header > div {
+    text-align: center;
+}
+
+/* Adjacent sibling combinator - styles a paragraph right after a heading */
+h2 + p {
+    margin-top: 4px;
+}
+
+/* General sibling combinator - styles all sections after a heading */
+h2 ~ section {
+    margin-top: 8px;
+}
+
+/* Combining two selectors - targets a span that also has the priority class */
+span.priority {
+    font-style: italic;
+}
+
+/* :has() - highlights a fieldset that contains a checked input */
+fieldset:has(input:checked) {
+    border-color: hsl(221, 83%, 53%);
+}
+
+/* Nested selectors - nav link styles nested inside nav */
+nav {
+    padding: 0.75em;
+
+    & a {
+        color: hsl(221, 83%, 53%);
+        text-decoration: none;
+    }
+
+    & a:hover {
+        color: hsl(221, 83%, 40%);
+        text-decoration: underline;
+    }
+}
+
+/* footer text centered */
+footer {
+    text-align: center;
 }
