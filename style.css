@@ -4,10 +4,12 @@
 }
 
 /* Sets the background to a light gray and text to dark gray for easy reading */
+/* Inter is loaded from Google Fonts as the 3rd party font */
 body {
     background-color: #f5f5f5;
     color: rgb(55, 65, 81);
     font-size: 1rem; /* rem: scales relative to the browser's default font size */
+    font-family: 'Inter', sans-serif; /* 3rd party Google Font with system fallback */
 }
 
 /* Adds space above and below main content - longhand margin */
@@ -225,4 +227,51 @@ nav {
 /* gives visual feedback when the button is actively being clicked */
 button:active {
     background-color: hsl(221, 83%, 30%);
+}
+
+/* ── Responsiveness ── */
+
+/* Tablet: 768px and below - reduce width, shrink header, collapse grid to 1 column */
+@media (max-width: 768px) {
+    .lab2-container {
+        width: 95%;
+    }
+
+    header {
+        height: auto;       /* let header grow to fit content on smaller screens */
+        padding: 16px;
+    }
+
+    .attendance-list {
+        grid-template-columns: 1fr; /* single column on tablet */
+    }
+
+    fieldset {
+        padding: 8px 12px;
+    }
+}
+
+/* Phone: 480px and below - stack nav vertically, shrink font size */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;  /* slightly smaller text on phones */
+    }
+
+    nav {
+        flex-direction: column; /* stack nav links vertically on phones */
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;        /* full-width button on phones for easy tapping */
+    }
 }
